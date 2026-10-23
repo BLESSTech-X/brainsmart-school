@@ -29,5 +29,32 @@
   $('#languageBtn').addEventListener('click', () => notify('Language options can be connected when the school confirms its preferred languages.'));
   function notify(message) { const toast = $('#toast'); toast.textContent = message; toast.classList.add('show'); clearTimeout(notify.timer); notify.timer = setTimeout(() => toast.classList.remove('show'), 2600); }
   $('#searchForm').addEventListener('submit', e => { e.preventDefault(); const query = $('#searchInput').value.trim().toLowerCase(); $$('.search-match').forEach(el => el.classList.remove('search-match')); if (!query) { notify('Type a word to search this page.'); return; } const candidates = $$('main h1, main h2, main h3, main p, main a'); const found = candidates.find(el => el.textContent.toLowerCase().includes(query)); if (found) { setMenu(false); found.classList.add('search-match'); found.scrollIntoView({behavior:'smooth', block:'center'}); notify(`Found: ${found.textContent.trim().slice(0,55)}`); setTimeout(() => found.classList.remove('search-match'), 3500); } else notify('No matching content found on this demo page.'); });
+
+  // Expandable mobile navigation groups: plus buttons reveal their own links.
+  $('.menu-expand').forEach(button => button.addEventListener('click', () => {
+    const group = button.closest('.menu-group');
+    const open = group.classList.toggle('is-open');
+    button.setAttribute('aria-expanded', String(open));
+    button.textContent = open ? '−' : '＋';
+  }));
+  // Demo search spans the whole visible homepage and navigates to useful pages for common terms.
+  const searchRoutes = [
+    {terms:['student','login','portal','homework'], url:'students.html'},
+    {terms:['admission','enrol','apply','application'], url:'admissions.html'},
+    {terms:['staff','teacher','team'], url:'staff.html'},
+    {terms:['calendar','term','event','date'], url:'calendar.html'},
+    {terms:['curriculum','learning','program','academic'], url:'academics.html'},
+    {terms:['family','parent','wellbeing','resource'], url:'families.html'},
+    {terms:['contact','phone','email','visit'], url:'contact.html'},
+    {terms:['news','announcement','newsletter'], url:'news.html'}
+  ];
+  const originalSearchHandler = $('#searchForm');
+  originalSearchHandler.addEventListener('submit', e => {
+    const query = $('#searchInput').value.trim().toLowerCase();
+    if (!query) return;
+    const route = searchRoutes.find(item => item.terms.some(term => query.includes(term)));
+    if (route) { e.preventDefault(); window.location.href = route.url; }
+  }, true);
+
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { setMenu(false); accessPanel.hidden = true; } });
 })();
