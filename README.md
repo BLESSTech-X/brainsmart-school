@@ -11,10 +11,18 @@ A responsive, mobile-first school website concept using a distinctive black, whi
 - `students.html` — interactive student-login and sample-dashboard preview
 - `families.html` — family resources and student support
 - `resources.html` — searchable school quick-access centre with audience/category filters and FAQs
+- `school-menu.html` — cafeteria/menu publication framework, dietary guidance and payment-service placeholder
+- `supply-lists.html` — printable generic checklist with grade-group filter; official lists clearly marked pending
+- `school-hours.html` — office hours, arrival, dismissal and attendance procedure framework
+- `family-support.html` — wellbeing, health/clinic, library, learning support and digital-safety directory
+- `community.html` — volunteer and community partnership framework with safeguarding notes
+- `school-profile.html` — school facts, leadership, achievements and accountability placeholders
+- `policies.html` — policy library framework for safeguarding, privacy, accessibility and records
+- `sitemap.html` — site-wide navigation index
 - `student-life.html` — clubs, sport and creative activities
 - `staff.html` — team profile placeholders
 - `news.html` — school news and announcement previews
-- `calendar.html` — events and term-date placeholders
+- `calendar.html` — searchable/filterable events plus a navigable month grid; no unverified event dates are invented
 - `contact.html` — enquiry form preview
 - `styles.css` and `script.js` — shared styling and homepage interactions
 
@@ -48,3 +56,10 @@ Replace sample photography and placeholder announcements with school-approved ma
 ## Hosting
 
 The static project can be hosted on GitHub Pages, Cloudflare Pages, Netlify or another static host. The repository includes a GitHub Actions deployment workflow. If the expected Pages URL does not load, enable **Settings → Pages → Build and deployment → GitHub Actions** and inspect the **Actions** tab for the deployment result.
+
+
+## School-specific information and launch readiness
+
+The reference-inspired information architecture now includes cafeteria/menu, grade-level supplies, school hours and daily routines, family support services, volunteer/community partnerships, school profile/accountability, policies/accessibility and a complete site map. School-specific facts remain visibly marked as awaiting approval wherever no verified information was supplied. The supply checklist, calendar navigation, resource search/filtering and news archive filters are front-end interactions only. Contact, newsletter, student login, meal payments, attendance, parent portal, records requests and safeguarding workflows are not connected to a backend and must not be presented as live services.
+
+Before production launch, the school must provide approved contact details, hours, menus, supply lists, term dates, safeguarding contacts/policies, privacy notice, staff biographies, school registration/profile facts, partner approvals and any real portal or payment integrations.
