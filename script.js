@@ -53,7 +53,7 @@
     const query = $('#searchInput').value.trim().toLowerCase();
     if (!query) return;
     const route = searchRoutes.find(item => item.terms.some(term => query.includes(term)));
-    if (route) { e.preventDefault(); window.location.href = route.url; }
+    if (route) { e.preventDefault(); e.stopImmediatePropagation(); window.location.href = route.url; }
   }, true);
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { setMenu(false); accessPanel.hidden = true; } });
