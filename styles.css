@@ -54,3 +54,18 @@ footer{background:#10141b;color:#fff}.footer-main{display:grid;grid-template-col
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1767b2;outline-offset:3px}
 [hidden]{display:none!important}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Shared school essentials components */
+.hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}
+.hub-card{border:1px solid #e0e6ed;padding:22px;background:#fff;min-width:0}
+.hub-card h2,.hub-card h3{margin:0 0 9px}
+.hub-card p{color:#5d6877;font-size:14px}
+.hub-card a{color:#1767b2;font-weight:800}
+.hub-icon{font-size:24px;color:#1767b2;margin-bottom:8px}
+.hub-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.hub-actions a,.hub-actions button{display:inline-flex;align-items:center;justify-content:center;border:1px solid #1767b2;background:#1767b2;color:#fff;padding:11px 15px;font:inherit;font-weight:800;font-size:12px;cursor:pointer}
+.hub-actions .secondary{background:#fff;color:#1767b2}
+@media(max-width:800px){.hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.hub-grid{grid-template-columns:1fr}.hub-card{padding:18px}}
+@media print{.hub-actions,.social-strip,.utility,.site-header,.mobile-page-nav,footer{display:none!important}}
