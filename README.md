@@ -10,6 +10,7 @@ A responsive, mobile-first school website concept using a distinctive black, whi
 - `admissions.html` — enrolment journey
 - `students.html` — interactive student-login and sample-dashboard preview
 - `families.html` — family resources and student support
+- `resources.html` — searchable school quick-access centre with audience/category filters and FAQs
 - `student-life.html` — clubs, sport and creative activities
 - `staff.html` — team profile placeholders
 - `news.html` — school news and announcement previews
@@ -25,6 +26,8 @@ A responsive, mobile-first school website concept using a distinctive black, whi
 - Rotating, swipeable hero carousel with pause and manual controls
 - In-page search with navigation to relevant sections/pages
 - Events carousel controls and accessibility display options
+- Searchable school resource centre with audience and category filters
+- Calendar search, category filters and quick filter tabs
 - Student portal preview with show/hide password and a simulated dashboard
 - Contact form preview with local confirmation
 
@@ -34,7 +37,7 @@ Open `index.html` in a browser. No build step or package installation is require
 
 ## Important demo limitations
 
-The student login is **not real authentication**. It accepts sample input only, does not connect to student records, does not save credentials and must never be used with real passwords. The contact form only displays a local confirmation; it does not send or store messages. No real student data, accounts, grades, attendance, messaging or school systems are connected.
+Calendar events and dates are illustrative placeholders only and must be replaced with school-approved information. The searchable resource centre is a front-end demo; it does not connect to school systems or provide downloadable official policies. The student login is **not real authentication**. It accepts sample input only, does not connect to student records, does not save credentials and must never be used with real passwords. The contact form only displays a local confirmation; it does not send or store messages. No real student data, accounts, grades, attendance, messaging or school systems are connected.
 
 Before using this for a real school, implement approved secure authentication and server-side form handling, privacy and safeguarding measures, and accessibility testing.
 
