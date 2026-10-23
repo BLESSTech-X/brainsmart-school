@@ -1,29 +1,47 @@
 # BrainSmart School — Website Concept Demo
 
-A responsive, mobile-first school website concept using a distinctive black, white, blue and warm-yellow visual system. The experience is inspired by common best practices in school websites, while using original BrainSmart branding and sample content rather than copying another school's identity.
+A responsive, mobile-first school website concept using a distinctive black, white, blue and warm-yellow visual system. The experience uses original BrainSmart branding and sample content, with separate destination pages and interactive previews.
 
-## Features in this demo
+## Pages included
 
-- Responsive desktop and mobile layouts
-- Sticky navigation, mobile slide-in menu and in-page search
+- `index.html` — homepage, hero carousel, school highlights, news preview and events
+- `our-school.html` — school story and values
+- `academics.html` — learning and curriculum overview
+- `admissions.html` — enrolment journey
+- `students.html` — interactive student-login and sample-dashboard preview
+- `families.html` — family resources and student support
+- `student-life.html` — clubs, sport and creative activities
+- `staff.html` — team profile placeholders
+- `news.html` — school news and announcement previews
+- `calendar.html` — events and term-date placeholders
+- `contact.html` — enquiry form preview
+- `styles.css` and `script.js` — shared styling and homepage interactions
+
+## Interactive features
+
+- Responsive desktop and mobile navigation
+- Expandable mobile menu groups: the plus buttons reveal nested links
+- Quick navigation between separate pages
 - Rotating, swipeable hero carousel with pause and manual controls
-- Quick-access resource grid
-- School introduction and learning-program cards
-- News and announcement cards
-- Upcoming events section with controls
-- Enrolment call-to-action and family information section
-- Footer with school contact placeholders
-- Basic display accessibility controls (text size and contrast)
-- Reduced-motion preference support
+- In-page search with navigation to relevant sections/pages
+- Events carousel controls and accessibility display options
+- Student portal preview with show/hide password and a simulated dashboard
+- Contact form preview with local confirmation
 
 ## Run locally
 
-Open `index.html` in a browser. No build step or package installation is required.
+Open `index.html` in a browser. No build step or package installation is required. Keep all HTML pages, `styles.css`, and `script.js` in the same folder.
+
+## Important demo limitations
+
+The student login is **not real authentication**. It accepts sample input only, does not connect to student records, does not save credentials and must never be used with real passwords. The contact form only displays a local confirmation; it does not send or store messages. No real student data, accounts, grades, attendance, messaging or school systems are connected.
+
+Before using this for a real school, implement approved secure authentication and server-side form handling, privacy and safeguarding measures, and accessibility testing.
 
 ## Before launch
 
-This is a visual and interaction prototype, not a finished production site. Replace sample photography and placeholder announcements with client-approved material. Confirm the school's actual address, phone number, email, calendar, admissions process, social links, policy documents, brand assets and approved languages. The language control is a placeholder, not a translation engine. The sample `hello@brainsmartschools.com` address should be confirmed before publication.
+Replace sample photography and placeholder announcements with school-approved material. Confirm the school's actual address, phone number, email, calendar, admissions process, social links, policy documents, brand assets, approved languages and leadership/team biographies. The language control is a placeholder, not a translation engine. Confirm whether `hello@brainsmartschools.com` is an official contact address before publication.
 
-## Suggested hosting
+## Hosting
 
-The static project can be hosted on GitHub Pages, Cloudflare Pages, Netlify or another static host. Connect `brainsmartschools.com` only after the domain is acquired/confirmed and DNS is ready.
+The static project can be hosted on GitHub Pages, Cloudflare Pages, Netlify or another static host. The repository includes a GitHub Actions deployment workflow. If the expected Pages URL does not load, enable **Settings → Pages → Build and deployment → GitHub Actions** and inspect the **Actions** tab for the deployment result.
