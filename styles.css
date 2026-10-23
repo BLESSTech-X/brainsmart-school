@@ -48,3 +48,9 @@ footer{background:#10141b;color:#fff}.footer-main{display:grid;grid-template-col
  .mobile-page-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:10px 16px;background:#f0f5fa;border-bottom:1px solid #dfe7ef}
  .mobile-page-nav a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:42px;padding:8px 6px;border:1px solid #dbe4ee;border-radius:9px;background:#fff;color:#23415f;font-size:.78rem;font-weight:800;text-decoration:none}
 }
+
+/* Quick access and interaction polish */
+.search-match{outline:3px solid #f4c44e;outline-offset:4px;transition:outline-color .2s}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #1767b2;outline-offset:3px}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
